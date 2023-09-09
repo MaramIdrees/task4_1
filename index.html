@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Even numbers</title>
+    </head>
+
+    <body>
+        <p>The result of adding even numbers:</p>
+        <p id="even"></p>
+        <p>The sum of the first five numbers:</p>
+        <p id="five"></p>
+        <p>Data User :</p>
+        <p id="data"></p>
+        <p> User Name :</p>
+        <p id="name"></p>
+        <p> User Number :</p>
+        <p id="number"></p>
+        <p> User Age :</p>
+        <p id="age"></p>
+        <p> User Gmail :</p>
+        <p id="gmail"></p>
+        <script>
+            const arr = [1, 2, 3, 20, 21, 23, 24, 25, 26, 27];
+            const reselt = sumEven(arr);
+            function sumEven(arr)
+            {
+                let sum = 0;
+                for (let i = 0; i < arr.length; i++)
+                {
+                    if (arr[i] % 2 == 0)
+                    {
+                        sum += arr[i];
+                    };
+                }
+                return sum;
+            };
+            document.getElementById("even").innerHTML = JSON.stringify(reselt);
+            console.log(reselt);
+
+            const array = [1, 3, 4, 71, 11, 2, 6, 19, 18];
+            const reselt2 = sum1(array);
+            function sum1(array)
+            {
+                let sum1 = 0;
+                for (let i = 0; i < array.length; i++)
+                {
+                    if (i < 5)
+                    {
+                        sum1 += array[i];
+                    };
+                }
+                return sum1;
+            };
+            document.getElementById("five").innerHTML = JSON.stringify(reselt2);
+            console.log(reselt2);
+            var userdata = {
+                name: "Maram",
+                number: 1995,
+                age: 25,
+                gmail: "maramidrees13@gmail.com",
+            };
+            document.getElementById("data").innerHTML = JSON.stringify(userdata);
+            console.log(userdata);
+            document.getElementById("name").innerHTML = JSON.stringify(userdata.name);
+            console.log(userdata.name);
+            document.getElementById("number").innerHTML = JSON.stringify(userdata.number);
+            console.log(userdata.number);
+            document.getElementById("age").innerHTML = JSON.stringify(userdata.age);
+            console.log(userdata.age);
+            document.getElementById("gmail").innerHTML = JSON.stringify(userdata.gmail);
+            console.log(userdata.gmail);
+        </script>
+    </body>
+
+</html>
